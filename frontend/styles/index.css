@@ -56,12 +56,12 @@ button {
   padding: 0.4rem 1.4rem;
   box-shadow: 0px 5px 0px rgb(173, 37, 46);
   cursor: pointer;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .race-now:hover {
-    background-color: rgb(185, 42, 51);
-    box-shadow: 0px -3px 0px rgb(173, 37, 46);
+  background-color: rgb(185, 42, 51);
+  box-shadow: 0px -3px 0px rgb(173, 37, 46);
 }
 
 .race-now span {
@@ -146,9 +146,9 @@ button {
 .landing-hero-content-btns-register p,
 .landing-hero-content-btns-login p {
   text-align: center;
-  margin-top: .6rem;
+  margin-top: 0.6rem;
   font-style: italic;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .landing-hero-content-btns-register button {
@@ -161,27 +161,27 @@ button {
   padding: 0.4rem 1.4rem;
   box-shadow: 0px 5px 0px rgb(173, 37, 46);
   cursor: pointer;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .landing-hero-content-btns-register button:hover {
-    background-color: rgb(185, 42, 51);
-    box-shadow: 0px -3px 0px rgb(173, 37, 46);
+  background-color: rgb(185, 42, 51);
+  box-shadow: 0px -3px 0px rgb(173, 37, 46);
 }
 
 .landing-hero-content-btns-login button {
-    background: transparent;
-    border: 1px solid #fff;
-    border-radius: 6px;
-    padding: .5rem;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  padding: 0.5rem;
 }
 
 .landing-hero-content-btns-login button:hover {
-    border: none;
-    background-color: #fff;
-    color: rgba(34, 90, 129, 1);
-    font-weight: 600;
-    padding: .58rem;
+  border: none;
+  background-color: #fff;
+  color: rgba(34, 90, 129, 1);
+  font-weight: 600;
+  padding: 0.58rem;
 }
 
 .landing-hero-image img {
