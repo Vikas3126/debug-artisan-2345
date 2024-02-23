@@ -69,10 +69,11 @@ nav a {
     width: 65%;
     justify-content: center;
     text-align: right;
-    padding: 100px 30px 100px 30px; 
+    padding: 100px 30px 165px 30px; 
     /* background-color: #333; */
-    background: url(../images/race-track.gif);
-    color: white;
+    background: url(../images/race-track.gif) ;
+
+    color: rgb(255, 213, 213);
     border-radius: 10px;
     margin-top: 20px;
     /* margin-left: 120px; */
@@ -90,7 +91,7 @@ nav a {
 }
 
 .start-btn {
-    padding: 15px 30px;
+    /* padding: 15px 30px;
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -98,24 +99,50 @@ nav a {
     cursor: pointer;
     text-decoration: none;
     font-size: 1.2em;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out; */
+    background-color: rgb(214, 47, 58);
+    color: aliceblue;
+    border: none;
+    border-radius: 3px;
+    /* display: flex; */
+    font-size: larger;
+    font-weight: 600;
+    align-items: center;
+    padding: 0.4rem 1.4rem;
+    box-shadow: 0px 5px 0px rgb(173, 37, 46);
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
 }
 
 .start-btn:hover {
-    background-color: #45a049;
+    background-color: rgb(185, 42, 51);
+  box-shadow: 0px -3px 0px rgb(173, 37, 46);
 }
+h1{
+    text-align: center;
 
+}
 .features-section {
-    display: flex;
-    justify-content: space-around;
+    margin: 50px 0px 50px 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
     margin-top: 50px;
     gap: 10px;
 }
-
+.image{
+   width: 40%;
+   justify-content: left;
+   align-self: last baseline;
+}
 .feature {
     text-align: center;
+    /* display: grid; */
+    /* grid-template-columns: repeat(2, 1fr); */
     padding: 20px;
     background-color: white;
+    background: url(../images/racecar.png);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -155,6 +182,10 @@ footer {
     .hero-section{
         margin: 0%;
         width: 100%;
+        padding: 100px 30px 10px 30px;
+        /* opacity: 0.; */
+        border-radius: 0%;
+        background: url(../images/racing_track.gif);
     }
     .user-section {
         margin-top: 10px;
@@ -174,6 +205,7 @@ footer {
     }
 
     .features-section {
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
