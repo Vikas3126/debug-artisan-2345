@@ -13,6 +13,11 @@ body {
   color: #fff;
 }
 
+ul, li, a {
+  text-decoration: none;
+  list-style-type: none;
+}
+
 .main-heading {
   margin: 1.6rem 0;
   font-size: 2.6rem;
@@ -104,7 +109,7 @@ button {
   );
   display: flex;
   gap: 1.6rem;
-  margin: 2rem 8rem 6rem;
+  margin: 2rem 8rem 10rem;
   padding: 2rem;
   position: relative;
   width: 55rem;
@@ -116,7 +121,7 @@ button {
 
 .landing-hero-content-para {
   font-weight: 500;
-  margin: 2rem 0;
+  margin: 2.6rem 0 3rem;
   opacity: 0.9;
 }
 
@@ -187,5 +192,114 @@ button {
 }
 
 .landing-hero-image img {
+  width: 100%;
+}
+
+.landing-latest-news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 6rem 14rem;
+}
+
+.landing-latest-news-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.landing-latest-news-heading button {
+  border: 1px solid rgb(72,134,185);
+  border-radius: 4px;
+  background: transparent;
+  color: rgb(72,134,185);
+  font-size: .8rem;
+  font-weight: 600;
+  padding: .6rem 1rem;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.landing-latest-news-heading button:hover {
+  background-color: rgb(72,134,185);
+  color: rgba(255, 255, 255, 0.7);
+  padding: .48rem 1rem;
+  box-shadow: 0px 4px 0px rgb(52, 97, 134);
+}
+
+.landing-latest-news-box {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(59,61,76);
+  box-shadow: 0px 0px 18px rgba(0, 0, 0, .3);
+}
+
+.landing-latest-news-box img {
+  flex: 1;
+  width: 58%;
+}
+
+.landing-latest-news-content {
+  flex: 2;
+  padding: 1rem;
+}
+
+.landing-latest-news-content-date {
+  font-size: .8rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+}
+
+.landing-latest-news-content-date span {
+  font-weight: 600;
+}
+
+.landing-latest-news-content-heading {
+  margin: .6rem 0;
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.landing-latest-news-content-para {
+  margin: 1.4rem 0 2.6rem;
+  font-size: .9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.landing-latest-news-content button {
+  background-color: rgb(214, 47, 58);
+  border: none;
+  border-radius: 3px;
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  padding: 0.4rem 1.4rem;
+  box-shadow: 0px 5px 0px rgb(173, 37, 46);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.landing-latest-news-content button:hover {
+  background-color: rgb(185, 42, 51);
+  box-shadow: 0px -3px 0px rgb(173, 37, 46);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red;
+  margin: 2rem 10rem;
+}
+
+.footer-links {
+  background-color: rgb(34,36,47);
+  display: flex;
+  gap: 4rem;
+  padding: 2rem;
   width: 100%;
 }
