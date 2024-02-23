@@ -78,6 +78,7 @@ button {
 
 .inner-navbar {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .inner-navbar button {
@@ -120,7 +121,7 @@ button {
 }
 
 .landing-hero-content {
-  width: 32rem;
+  width: 62%;
 }
 
 .landing-hero-content-para {
@@ -304,6 +305,7 @@ button {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   display: flex;
+  flex-wrap: wrap;
   gap: 4rem;
   padding: 2rem;
   width: 100%;
@@ -317,8 +319,8 @@ button {
 .footer-address {
   background-color: rgb(26, 27, 37);
   color: rgba(255, 255, 255, 0.7);
-  font-size: .9rem;
-  padding: .6rem 1rem;
+  font-size: 0.9rem;
+  padding: 0.6rem 1rem;
   width: 100%;
 }
 
@@ -332,4 +334,94 @@ button {
   top: -4rem;
   right: 4rem;
   width: 16rem;
+}
+
+@media screen and (max-width: 1240px) {
+  .landing-hero {
+    font-size: 90%;
+    margin: 2rem 4rem 10rem;
+  }
+  .landing-hero-content {
+    width: 55%;
+  }
+  .landing-hero-image {
+    right: -16%;
+    top: 8%;
+    width: 58%;
+  }
+  .landing-latest-news {
+    margin: 6rem 8rem;
+  }
+  .footer {
+    margin: 10rem 10rem 0;
+  }
+  .footer-address ul {
+    font-size: 90%;
+  }
+  .footer img {
+    top: -1.4rem;
+    width: 13rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .landing-hero {
+    margin: 8rem 2rem;
+    width: 90%;
+  }
+  .landing-hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 16rem;
+    width: 100%;
+  }
+  .landing-hero-image {
+    top: -18%;
+    right: 8%;
+    width: 85%;
+  }
+  .landing-latest-news-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .landing-latest-news-box img {
+    width: 100%;
+  }
+  .footer {
+    margin: 10rem 4rem 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .navbar {
+    margin: 1rem;
+  }
+  .landing-hero-content {
+    margin-top: 12rem;
+  }
+  .landing-latest-news {
+    margin: 6rem 5rem;
+  }
+  .footer-links {
+    gap: 2rem;
+    padding-top: 14rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .navbar {
+    border: 1px solid red;
+  }
+  .landing-hero-content {
+    margin-top: 8rem;
+  }
+  .landing-latest-news {
+    margin: 6rem 3rem;
+  }
+  .landing-hero-image {
+    top: -18%;
+    right: 2%;
+    width: 85%;
+  }
 }
