@@ -103,6 +103,7 @@ button {
     rgba(20, 66, 98, 1) 100%
   );
   display: flex;
+  gap: 1.6rem;
   margin: 2rem 8rem 6rem;
   padding: 2rem;
   position: relative;
@@ -126,13 +127,6 @@ button {
 
 .landing-hero-content-btns div {
   flex: 1;
-}
-
-.landing-hero-image {
-  position: absolute;
-  top: 0rem;
-  right: -16rem;
-  width: 36rem;
 }
 
 .landing-hero-content-btns-register button,
@@ -182,6 +176,14 @@ button {
   color: rgba(34, 90, 129, 1);
   font-weight: 600;
   padding: 0.58rem;
+}
+
+.landing-hero-image {
+  /* position: absolute;
+  top: 0;
+  right: -30%;
+  width: 66%; */
+  margin-right: -40%;
 }
 
 .landing-hero-image img {
