@@ -1,20 +1,42 @@
-.learningTool{
+
+body{
     display: flex;
-    /* border: 1px solid red; */
-    align-items: center;
-    justify-content: space-between;
-    width:70%;
-  
-    justify-items: center;
-    /* justify-content: center; */
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    justify-content: center;
+    background-color: rgb(46,49,65);
 }
-.toolHeading h2{
+
+#accordionPanelsStayOpenExample{
+    width: 75%;
+    margin: auto;
+}
+.accordion-item {
+     background-color: #3B3D4C;
+     margin-top: 20px;
+     border: none;
+     border-radius: 20px;
+}
+.accordion-header{
+    background-color: #232531;
+    border-radius: 20px;
+}
+.accordion-button{
     font-weight: 400;
-    color: rgba(26, 32, 44, 1);
-    font-size: 25px;
+    color: white;
+    font-size: 23px;
     font-family: sans-serif;
     padding-left: 40px;
+    padding: 27px;
+    background-color: #232531;
+    border: none;
+}
+.accordion-button:hover{
+    /* background-color: #272935; */
+}
+.accordion-body strong{
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-family: sans-serif;
 }
 
 .signPlus{
@@ -22,4 +44,32 @@
     color: RGB(26, 32, 44);
     font-weight:bolder;
     padding-right: 20px;
+}
+.mainContainer{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordion-body-img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.accordion-body-img-container{
+    width: 250px;
+    height: 200px;
+}
+
+
+
+@media (max-width:950px) {
+    .mainContainer{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    } 
+    .accordion-body-img{
+        width: 100%;
+    }
 }
