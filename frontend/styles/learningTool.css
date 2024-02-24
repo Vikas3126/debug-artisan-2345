@@ -60,6 +60,18 @@ body{
     width: 250px;
     height: 200px;
 }
+#correctwaysittingImg{
+    width: 85%;
+    /* border: 1px solid red; */
+}
+#keyboardSchemeImg{
+    width: 85%;
+}
+#fingerMotionimg{
+
+    width: 90%;
+    /* border: ; */
+}
 
 
 
