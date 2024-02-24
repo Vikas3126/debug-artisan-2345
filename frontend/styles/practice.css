@@ -190,21 +190,7 @@ button {
   justify-content: space-between;
   border-top: 1px solid #bfbfbf;
 }
-/* .content button{
-  outline: none;
-  border: none;
-  width: 105px;
-  color: #fff;
-  padding: 8px 0;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  background: #17A2B8;
-  transition: transform 0.3s ease;
-} */
-/* .content button:active{
-  transform: scale(0.97);
-} */
+
 .content .result-details{
   display: flex;
   flex-wrap: wrap;

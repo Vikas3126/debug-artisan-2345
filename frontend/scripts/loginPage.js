@@ -123,7 +123,7 @@ async function loginUser() {
         localStorage.setItem("token", data.access_token);
         localStorage.setItem("name", data.name);
 
-        location.href = "practice.html";
+        location.href = "dashboard.html";
       } else {
         invalidspan.innerHTML = `${data.msg}`;
         invalidspan.style.color = "red";
