@@ -15,6 +15,96 @@ body {
     align-items: center;
 }
 
+ul,
+li,
+a {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.main-heading {
+  margin: 1.6rem 0;
+  font-size: 2.6rem;
+  font-weight: 900;
+  letter-spacing: 0.4rem;
+  text-align: center;
+  transform: skewX(-16deg);
+  cursor: pointer;
+  color: white;
+}
+
+.main-heading span {
+  padding: 0.2rem 0.1rem 0.2rem 0.4rem;
+  background-color: rgb(214, 47, 58);
+  transform: skewX(-20deg);
+}
+
+.main-heading span:nth-child(2) {
+  padding: 0.2rem;
+  margin-left: 0.2rem;
+}
+
+button {
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.race-now {
+  background-color: rgb(214, 47, 58);
+  border: none;
+  border-radius: 3px;
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  padding: 0.4rem 1.4rem;
+  box-shadow: 0px 5px 0px rgb(173, 37, 46);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.race-now:hover {
+  background-color: rgb(185, 42, 51);
+  box-shadow: 0px -3px 0px rgb(173, 37, 46);
+}
+
+.race-now span {
+  font-weight: 700;
+  letter-spacing: 0.4rem;
+}
+
+.inner-navbar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.inner-navbar button {
+  background-color: rgb(60, 64, 85);
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0.8rem 1.4rem;
+  width: 8rem;
+}
+
+.inner-navbar button:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.navbar-selected {
+  background: linear-gradient(
+    0deg,
+    rgb(61, 61, 61) 0%,
+    rgb(44, 44, 44) 50%,
+    rgb(34, 34, 34) 100%
+  );
+  color: rgba(255, 255, 255, 1);
+}
 header {
     background-color: #333;
     color: white;
@@ -69,10 +159,11 @@ nav a {
     width: 65%;
     justify-content: center;
     text-align: right;
-    padding: 100px 30px 100px 30px; 
+    padding: 100px 30px 165px 30px; 
     /* background-color: #333; */
-    background: url(../images/race-track.gif);
-    color: white;
+    background: url(../images/race-track.gif) ;
+
+    color: rgb(255, 213, 213);
     border-radius: 10px;
     margin-top: 20px;
     /* margin-left: 120px; */
@@ -90,7 +181,7 @@ nav a {
 }
 
 .start-btn {
-    padding: 15px 30px;
+    /* padding: 15px 30px;
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -98,24 +189,50 @@ nav a {
     cursor: pointer;
     text-decoration: none;
     font-size: 1.2em;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out; */
+    background-color: rgb(214, 47, 58);
+    color: aliceblue;
+    border: none;
+    border-radius: 3px;
+    /* display: flex; */
+    font-size: larger;
+    font-weight: 600;
+    align-items: center;
+    padding: 0.4rem 1.4rem;
+    box-shadow: 0px 5px 0px rgb(173, 37, 46);
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
 }
 
 .start-btn:hover {
-    background-color: #45a049;
+    background-color: rgb(185, 42, 51);
+  box-shadow: 0px -3px 0px rgb(173, 37, 46);
 }
+h1{
+    text-align: center;
 
+}
 .features-section {
-    display: flex;
-    justify-content: space-around;
+    margin: 50px 0px 50px 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
     margin-top: 50px;
     gap: 10px;
 }
-
+.image{
+   width: 40%;
+   justify-content: left;
+   align-self: last baseline;
+}
 .feature {
     text-align: center;
+    /* display: grid; */
+    /* grid-template-columns: repeat(2, 1fr); */
     padding: 20px;
     background-color: white;
+    background: url(../images/racecar.png);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -126,15 +243,51 @@ nav a {
     margin-bottom: 20px;
 } */
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    border-radius: 10px;
-    margin-top: 50px;
-   
-}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10rem 14rem 0;
+    position: relative;
+  }
+  
+  .footer-links {
+    background-color: rgb(34, 36, 47);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding: 2rem;
+    width: 100%;
+  }
+  
+  .footer-links ul li {
+    margin: 0.5rem 0;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .footer-address {
+    background-color: rgb(26, 27, 37);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+    width: 100%;
+  }
+  
+  .footer-address ul {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .footer img {
+    position: absolute;
+    top: -4rem;
+    right: 4rem;
+    width: 16rem;
+  }
 
 /* Responsive Styles */
 
@@ -155,6 +308,10 @@ footer {
     .hero-section{
         margin: 0%;
         width: 100%;
+        padding: 100px 30px 10px 30px;
+        /* opacity: 0.; */
+        border-radius: 0%;
+        background: url(../images/racing_track.gif);
     }
     .user-section {
         margin-top: 10px;
@@ -174,6 +331,7 @@ footer {
     }
 
     .features-section {
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
@@ -182,3 +340,93 @@ footer {
         margin-bottom: 20px;
     }
 }
+@media screen and (max-width: 1240px) {
+    .landing-hero {
+      font-size: 90%;
+      margin: 2rem 4rem 10rem;
+    }
+    .landing-hero-content {
+      width: 55%;
+    }
+    .landing-hero-image {
+      right: -16%;
+      top: 8%;
+      width: 58%;
+    }
+    .landing-latest-news {
+      margin: 6rem 8rem;
+    }
+    .footer {
+      margin: 10rem 10rem 0;
+    }
+    .footer-address ul {
+      font-size: 90%;
+    }
+    .footer img {
+      top: -1.4rem;
+      width: 13rem;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    .landing-hero {
+      margin: 8rem 2rem;
+      width: 90%;
+    }
+    .landing-hero-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 16rem;
+      width: 100%;
+    }
+    .landing-hero-image {
+      top: -18%;
+      right: 8%;
+      width: 85%;
+    }
+    .landing-latest-news-box {
+      flex-direction: column;
+      align-items: center;
+    }
+    .landing-latest-news-box img {
+      width: 100%;
+    }
+    .footer {
+      margin: 10rem 4rem 0;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .navbar {
+      margin: 1rem;
+    }
+    .landing-hero-content {
+      margin-top: 12rem;
+    }
+    .landing-latest-news {
+      margin: 6rem 5rem;
+    }
+    .footer-links {
+      gap: 2rem;
+      padding-top: 14rem;
+    }
+  }
+  
+  @media screen and (max-width: 560px) {
+    .navbar {
+      border: 1px solid red;
+    }
+    .landing-hero-content {
+      margin-top: 8rem;
+    }
+    .landing-latest-news {
+      margin: 6rem 3rem;
+    }
+    .landing-hero-image {
+      top: -18%;
+      right: 2%;
+      width: 85%;
+    }
+  }
+  

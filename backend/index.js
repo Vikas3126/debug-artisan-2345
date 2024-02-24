@@ -10,6 +10,7 @@ const connectedUsers = {};
 const {userRouter} = require("./controller/routes/manualLogin.route")
 const facebookRouter = require('./controller/routes/facebook.route');
 const googleRouter = require('./controller/routes/google.route');
+const {newsRouter}=require("./controller/routes/news.routes")
 const {connection}=require('./db');
 const app = express();
 
@@ -46,6 +47,7 @@ app.use('/users', userRouter);
 app.use('/facebook', facebookRouter);
 
 app.use('/google', googleRouter);
+app.use("/news",newsRouter)
 
 app.use(express.static('lobby.html'));
 
