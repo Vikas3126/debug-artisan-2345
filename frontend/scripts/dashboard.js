@@ -21,3 +21,14 @@ document.getElementById("Learnig").addEventListener("click", function (e) {
     e.preventDefault()
     window.location.href = "../learningTool.html"
 });
+
+
+function openPopup() {
+    // Show the popup
+    document.getElementById('popup').style.display = 'block';
+}
+
+function closePopup() {
+    // Hide the popup
+    document.getElementById('popup').style.display = 'none';
+}

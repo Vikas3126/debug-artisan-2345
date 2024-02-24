@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-    />
     <link rel="stylesheet" href="../styles/dashboard.css">
     <link rel="stylesheet" href="../styles/nav.res.css">
     <title>Type Racer</title>
@@ -58,9 +54,9 @@
         </section>
 
         <section class="features-section">
-            <div class="feature">
-                <div >
-                    <h2>Real-Time Racing</h2>
+            <button class="feature" onclick="lobbyRedirecting()">
+                <img src="icon1.png" alt="Feature 1">
+                <h2>Real-Time Racing</h2>
                 <p>Compete with people around the world in real-time typing races.</p>
                 </div>
                 
@@ -77,13 +73,11 @@
                 <img src="icon2.png" alt="Feature 2">
                 <h2>Practice Mode</h2>
                 <p>Improve your typing skills with our practice mode.</p>
-                <a href="../view/practice.html" class="start-btn">Start Practice</a>
             </div>
             <div class="feature">
                 <img src="icon3.png" alt="Feature 3">
                 <h2>Leaderboard</h2>
                 <p>Check your ranking on our global leaderboard.</p>
-                <a href="#" class="start-btn">Create Room</a>
             </div>
         </section>
     </main>
@@ -128,9 +122,9 @@
     <script src="../scripts/logout.js"></script>
 </body>
 <script src="../scripts/"></script>
-<!-- <script>
+<script>
    function lobbyRedirecting(){
     window.location.href = "lobby.html"
    }
-</script> -->
+</script>
 </html>

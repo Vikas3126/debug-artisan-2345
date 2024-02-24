@@ -21,6 +21,5 @@ function updateLobby(lobbyUsers) {
         userLobby.appendChild(newUser);
     });
 
-    
-
 }
+
