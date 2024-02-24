@@ -40,3 +40,7 @@ document.getElementById("Home").addEventListener("click", function (e) {
     e.preventDefault()
     window.location.href = "../index.html"
 });
+function toggleMenu() {
+    var innerNavbar = document.querySelector('.inner-navbar');
+    innerNavbar.classList.toggle('show');
+  }

@@ -4,29 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/dashboard.css">
+    <link rel="stylesheet" href="../styles/nav.res.css">
     <title>Type Racer</title>
+    <style>
+      #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+    </style>
 </head>
 <body>
-
-    <header>
-        <div class="logo">Type Racer</div>
-        <nav>
-            <ul>
-                <li><a href="#">Race</a></li>
-                <li><a href="#">Practice</a></li>
-                <li><a href="#">Compete</a></li>
-                <li><a href="#">Stats</a></li>
-            </ul>
-        </nav>
-        <div class="user-section">
-            <a href="#" class="login-btn">Login</a>
-            <a href="#" class="signup-btn">Sign Up</a>
-        </div>
-    </header>
-
+<!-- navbar -->
+<h1 class="main-heading" onclick="homePage()">
+  <span>S</span>PEEDSTER<span></span>
+</h1>
+<nav class="navbar">
+  <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+  <div class="inner-navbar">
+    <button id="Home" class="navbar-selected">Home</button>
+    <button id="shop">Shop</button>
+    <button id="friends">Friends</button>
+    <button id="team">news</button>
+    <button id="Learnig">Tools</button>
+    
+  </div>
+  <button id="logout-btn" class="race-now" onclick="logout()">
+    <span class="material-symbols-outlined"> Logout </span> Logout
+    </button>
+    <button id="logout-btn1" class="race-now" onclick="logout()">
+      <span class="material-symbols-outlined"> Logout </span>
+      </button>
+    
+</nav>
+      <!-- navbar end -->
+    <h1>Get Set Go !!!</h1>
     <main class="container">
         <section class="hero-section">
-            <h1>Type Racer</h1>
+            
             <p>Race against others and improve your typing speed!</p>
             <a href="#" class="start-btn">Start Racing</a>
         </section>
@@ -36,7 +58,17 @@
                 <img src="icon1.png" alt="Feature 1">
                 <h2>Real-Time Racing</h2>
                 <p>Compete with people around the world in real-time typing races.</p>
-            </button>
+                </div>
+                
+                <div >
+                    <a style=" align-self: start;" href="#" class="start-btn" onclick="openPopup()">Start Practice</a>
+                    <img class="image" src="../images/car-re.png" alt="Feature 1">
+                    <div id="popup">
+                      <p>This is the content of the popup window.</p>
+                      <button onclick="closePopup()">Close</button>
+                  </div>
+                </div>
+            </div>
             <div class="feature">
                 <img src="icon2.png" alt="Feature 2">
                 <h2>Practice Mode</h2>
@@ -50,10 +82,44 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Type Racer. All rights reserved.</p>
-    </footer>
+    <footer class="footer">
+        <div class="footer-links">
+          <ul>
+            <li>Race</li>
+            <li>Top Teams</li>
+            <li>Updates</li>
+          </ul>
+          <ul>
+            <li>News</li>
+            <li>Support</li>
+            <li>About Us</li>
+          </ul>
+          <ul>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div class="footer-address">
+          <ul>
+            <li>TERMS OF SERVICE</li>
+            <li>PRIVACY POLICY</li>
+            <li>2024 &copy; debug-artisan-2345</li>
+          </ul>
+        </div>
+        <img src="./images/Speedster.png" alt="speedster-logo" />
+      </footer>
+      <script>
+        function openPopup() {
+            // Show the popup
+            document.getElementById('popup').style.display = 'block';
+        }
 
+        function closePopup() {
+            // Hide the popup
+            document.getElementById('popup').style.display = 'none';
+        }
+      </script>
+    <script src="../scripts/dashboard.js"></script>
+    <script src="../scripts/logout.js"></script>
 </body>
 <script src="../scripts/"></script>
 <script>
