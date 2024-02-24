@@ -12,7 +12,7 @@
     <title>Type Racer</title>
     <style>
       #popup {
-            display: none;
+        display: none;
             position: fixed;
             top: 50%;
             left: 50%;
@@ -22,6 +22,15 @@
             border: 1px solid #ccc;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
+            
+        }
+        #close-btn {
+            cursor: pointer;
+            color: #333;
+            background-color: #ddd;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -81,9 +90,10 @@
                 <a href="../view/practice.html" class="start-btn">Start Practice</a>
             </div>
             <div class="feature">
-                <img src="icon3.png" alt="Feature 3">
+                
                 <h2>Repeating words</h2>
                 <p>Easy repeating words for practice.</p>
+                <img class="image" src="../images/car-re.png" alt="Feature 1">
                 <a href="#" class="start-btn">Play with words</a>
             </div>
         </section>
@@ -118,6 +128,7 @@
         function openPopup() {
             // Show the popup
             document.getElementById('popup').style.display = 'block';
+            document.body.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
         }
 
         function closePopup() {
