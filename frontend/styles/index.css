@@ -118,6 +118,8 @@ button {
   padding: 2rem;
   position: relative;
   width: 55rem;
+  margin-left: 20%;
+  /* margin: auto; */
 }
 
 .landing-hero-content {
