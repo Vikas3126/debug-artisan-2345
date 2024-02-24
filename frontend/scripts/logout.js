@@ -28,7 +28,7 @@ function logout() {
 
 document.getElementById("Learnig").addEventListener("click", function (e) {
     e.preventDefault()
-    window.location.href = "../learningTool.html"
+    window.location.href = "learningTool.html"
 });
 
 document.getElementById("team").addEventListener("click", function (e) {
@@ -38,7 +38,7 @@ document.getElementById("team").addEventListener("click", function (e) {
 
 document.getElementById("Home").addEventListener("click", function (e) {
     e.preventDefault()
-    window.location.href = "../index.html"
+    window.location.href = "dashboard.html"
 });
 function toggleMenu() {
     var innerNavbar = document.querySelector('.inner-navbar');
