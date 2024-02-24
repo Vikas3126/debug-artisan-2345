@@ -48,8 +48,11 @@ app.use("/news",newsRouter)
 
 app.use(express.static('lobby.html'));
 
+
+
 io.on("connection",(socket)=>{
     socket.on('join-lobby',(userName)=>{
+      console.log(`${userName} connected`);
         connectedUsers[socket.id] = {name : userName};
         io.emit('lobby_info', Object.values(connectedUsers));
     })
