@@ -54,6 +54,7 @@ function updateLobby(lobbyUsers) {
     lobbyUsers.forEach(user => {
         const newUser = document.createElement('div');
         console.log(`hello ${user.name}`);
+        newUser.style.color = "#d62f3a"
         newUser.textContent = `${user.name} joined`;
         newUser.classList.add('joined-user');
         userLobby.appendChild(newUser);

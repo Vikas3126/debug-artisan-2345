@@ -21,6 +21,8 @@ body {
     text-align: center;
     transform: skewX(-16deg);
     cursor: pointer;
+    color: white;
+    font-size: 3rem;
   }
   
   .main-heading span {
