@@ -18,12 +18,14 @@ function joinLobby() {
 }
 function sendmessage(){
     const username = sessionStorage.getItem("username")
-    const message=document.getElementById('messagebox').value;
-    if (message.trim() === "") {
-        alert("Please enter a message.");
-        return;
-    }
-    socket.emit("loby-message",username,message);
+    let message=document.getElementById('messagebox');
+   
+    // if (message.value.trim() === "") {
+    //     alert("Please enter a message.");
+    //     return;
+    // }
+    socket.emit("loby-message",username,message.value);
+    message.value=""
 }
 
 window.onload = function() {
