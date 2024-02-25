@@ -48,29 +48,37 @@ app.use("/news",newsRouter)
 
 app.use(express.static('public'));
 
+let connections = 0;
 
+io.on("connection", (socket) => {
+  // Increment connections count
+  connections++;
 
-io.on("connection",(socket)=>{
-    socket.on('join-lobby',(userName)=>{
+  // Emit updated connections count to all clients
+  io.emit("connections_count", connections);
+
+  // Handle 'join-lobby' event
+  socket.on('join-lobby', (userName) => {
       console.log(`${userName} connected`);
-        connectedUsers[socket.id] = {name : userName};
-        io.emit('lobby_info', Object.values(connectedUsers));
-    })
-    
-    socket.on('loby-message',(userName,message)=>{
-      // connectedUsers[socket.id] = {name : userName,msg:message};
-      // const username= connectedUsers.name
-      io.emit('lobby_msg', userName,message);
-  })
+      connectedUsers[socket.id] = { name: userName };
+      io.emit('lobby_info', Object.values(connectedUsers));
+  });
 
-    socket.on('disconnect', () => {
-        if (connectedUsers[socket.id]) {
-            const userName = connectedUsers[socket.id].name;
-            delete connectedUsers[socket.id];
-            console.log(`${userName} left the lobby`);
-            io.emit('lobby_info', Object.values(connectedUsers));
-        }
-    });
+  // Handle socket disconnection
+  socket.on('disconnect', () => {
+      // Decrement connections count on disconnection
+      connections--;
+
+      // Emit updated connections count to all clients
+      io.emit("connections_count", connections);
+
+      if (connectedUsers[socket.id]) {
+          const userName = connectedUsers[socket.id].name;
+          delete connectedUsers[socket.id];
+          console.log(`${userName} left the lobby`);
+          io.emit('lobby_info', connectedUsers);
+      }
+  });
 });
 
 
