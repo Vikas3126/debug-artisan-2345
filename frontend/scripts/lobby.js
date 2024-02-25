@@ -64,6 +64,7 @@ function timer() {
     const gif = document.createElement('img');
     gif.src = "https://cdn.pixabay.com/animation/2023/03/27/19/09/19-09-52-704_512.gif";
     popup.append(timerElement, gif);
+}
 
     let count = 5;
     updateTimer();
@@ -80,7 +81,6 @@ function timer() {
             }, 1000); 
         }
     }
-
 
 socket.on('lobby_msg', (username,message) => {
     updatemessage(username,message);
