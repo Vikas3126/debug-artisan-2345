@@ -40,6 +40,8 @@ app.use(
     cb(null, obj);
   });
 
+  app.use(express.json());
+
 
 app.use('/users', userRouter);
 app.use('/facebook', facebookRouter);
