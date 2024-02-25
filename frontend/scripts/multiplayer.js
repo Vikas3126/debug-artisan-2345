@@ -12,10 +12,10 @@ const userInterface = document.getElementById('multiplayer-interface');
         let carImages = []; // Array to store the car images
 
         // Fetch car images from the server
-        fetch('https://type-racing-speedster.onrender.com/cars/car-images')
+        fetch('https://type-racing-speedster.onrender.com/cars/')
           .then(response => response.json())
           .then(data => {
-            carImages = data; 
+            carImages = data.car_data; 
             console.log(carImages);
           })
           .catch(error => console.error('Error fetching car images:', error));
@@ -31,11 +31,17 @@ const userInterface = document.getElementById('multiplayer-interface');
             for (let i = 0; i < count && i < 4; i++) {
                 let usersTrack = document.createElement('div');
                 const randomIndex = Math.floor(Math.random() * carImages.length);
+                console.log(randomIndex)
                 const carImageSrc = carImages[randomIndex];
-        
+                console.log(carImageSrc)
                 // Create an image element for the car
+                let caruser = document.createElement("p")
+                caruser.innerText = username
+                usersTrack.appendChild(caruser)
+
                 let carImage = document.createElement('img');
-                carImage.src = carImageSrc;
+                carImage.setAttribute("id", "carImage");
+                carImage.src = carImageSrc.image;
                 carImage.alt = 'Car';
                 usersTrack.appendChild(carImage);
 

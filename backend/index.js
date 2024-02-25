@@ -68,6 +68,14 @@ io.on("connection", (socket) => {
       io.emit('lobby_info', Object.values(connectedUsers));
   });
 
+
+  socket.on('loby-message',(userName,message)=>{
+      // connectedUsers[socket.id] = {name : userName,msg:message};
+      // const username= connectedUsers.name
+      io.emit('lobby_msg', userName,message);
+  })
+
+
   // Handle socket disconnection
   socket.on('disconnect', () => {
       // Decrement connections count on disconnection
