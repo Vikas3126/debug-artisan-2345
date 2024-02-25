@@ -12,6 +12,7 @@ const facebookRouter = require('./controller/routes/facebook.route');
 const googleRouter = require('./controller/routes/google.route');
 const {newsRouter}=require("./controller/routes/news.routes")
 const {connection}=require('./db');
+const { carRoute } = require('./controller/routes/cars.routes');
 const app = express();
 
 const server = http.createServer(app);
@@ -45,6 +46,7 @@ app.use('/facebook', facebookRouter);
 
 app.use('/google', googleRouter);
 app.use("/news",newsRouter)
+app.use("/cars",carRoute)
 
 app.use(express.static('public'));
 
