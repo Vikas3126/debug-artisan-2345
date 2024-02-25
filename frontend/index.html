@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
     <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/nav.res.css">
     <title>Speedster</title>
   </head>
   <body>
@@ -16,6 +17,7 @@
       <span>S</span>PEEDSTER<span></span>
     </h1>
     <nav class="navbar">
+      <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
       <button class="race-now">
         <span class="material-symbols-outlined"> double_arrow </span> Race Now
       </button>
@@ -39,11 +41,11 @@
         </p>
         <div class="landing-hero-content-btns">
           <div class="landing-hero-content-btns-register">
-            <button>Register Now</button>
+            <button id="reg-btn">Register Now</button>
             <p>New Users</p>
           </div>
           <div class="landing-hero-content-btns-login">
-            <button>Log In</button>
+            <button id="log-btn">Log In</button>
             <p>Have an Account?</p>
           </div>
         </div>
@@ -56,7 +58,7 @@
     <div class="landing-latest-news">
       <div class="landing-latest-news-heading">
         <h1>Latest News</h1>
-        <button>View More News</button>
+        <button id="view-btn">View More News</button>
       </div>
       <div class="landing-latest-news-box">
         <img src="./images/latest-news.png" alt="latest-news" />
