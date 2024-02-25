@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../styles/dashboard.css">
     <link rel="stylesheet" href="../styles/nav.res.css">
     <title>Type Racer</title>
-    <style>
+    <!-- <style>
       #popup {
         display: none;
             position: fixed;
@@ -18,9 +18,12 @@
             left: 50%;
             transform: translate(-50%, -50%);
             padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #849292;
+            border: 1px solid #0d0e0d;
+            border-radius: 3%;
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+            height: 7%;
+            width: 27%;
 
 
             z-index: 1000;
@@ -35,6 +38,63 @@
             border-radius: 5px;
 
         }
+        #join-lobbbyy{
+          background-color: rgb(230, 103, 29);
+          border: 2px double black;
+        }
+        #join-lobbbyy:hover{
+          background-color: rgb(30, 156, 72);
+        }
+        
+    </style> -->
+    <style>
+      #popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #849292;
+    border: 1px solid #0d0e0d;
+    border-radius: 3%;
+    width: 27%;
+    height: auto;
+    z-index: 1000;
+}
+
+#close-btn {
+    cursor: pointer;
+    color: #333;
+    background-color: #ddd;
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#join-lobbbyy {
+    background-color: rgb(230, 103, 29);
+    border: 2px double black;
+    padding: 8px 16px;
+}
+
+#join-lobbbyy:hover {
+    background-color: rgb(30, 156, 72);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    #popup {
+        width: 80%;
+        padding: 15px;
+    }
+
+    #close-btn, #join-lobbbyy {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -95,8 +155,8 @@
                 <a href="../view/words.board.html" class="start-btn">Play words</a>
             </div>
             <div id="popup">
-                <input type="text" id="user-detail">
-                <button onclick="joinLobby()">join lobby</button>
+                <input type="text" id="user-detail" placeholder="Enter your name">
+                <button onclick="joinLobby()" id="join-lobbbyy">join lobby</button>
             </div>
         </section>
     </main>
