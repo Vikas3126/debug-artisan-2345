@@ -16,6 +16,11 @@ function joinLobby() {
     // Redirect the user to the lobby page
     window.location.href = "./lobby.html";
 }
+function sendmessage(){
+    const username = document.getElementById('userName').value;
+    const message=document.getElementById('messagebox').value;
+    socket.emit("loby-message",username,message);
+}
 
 window.onload = function() {
     const username = sessionStorage.getItem("username");
@@ -37,7 +42,7 @@ socket.on('lobby_info', (lobbyUsers) => {
 
 function updateLobby(lobbyUsers) {
     const userLobby = document.getElementById('user-joining');
-    userLobby.innerHTML = '';
+    // userLobby.innerHTML = '';
     lobbyUsers.forEach(user => {
         const newUser = document.createElement('div');
         console.log(`hello ${user.name}`);
@@ -47,6 +52,7 @@ function updateLobby(lobbyUsers) {
     });
 
 }
+
 
 function timer() {
     const popup = document.getElementById('popup');
@@ -74,5 +80,22 @@ function timer() {
             }, 1000); 
         }
     }
+
+
+socket.on('lobby_msg', (username,message) => {
+    updatemessage(username,message);
+});
+
+function updatemessage(username,messagedetails) {
+    const userLobby = document.getElementById('user-joining');
+   
+        const newUser = document.createElement('div');
+        newUser.textContent = `${username}: ${messagedetails}`;
+        newUser.classList.add('message-detail');
+        userLobby.appendChild(newUser);
+
+    
+
+
 }
 

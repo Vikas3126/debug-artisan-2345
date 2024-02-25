@@ -9,7 +9,7 @@ body {
     /* display: grid; */
     place-items: center;
     min-height: 100vh;
-    background: url(../images/bg-tires.png), linear-gradient(130deg, #9498ab 0%, #2E3141 20%, #93959d 20%, #303343 25%, #2E3141 25%, #2E3141 27%, #303343 27%, #303343 50%, #2E3141 50%, #2E3141 85%, #303343 85%, #9294a2 90%, #2E3141 90%)
+    background: url(../images/bg-tires.png), linear-gradient(130deg, #767882 0%, #2E3141 20%, #56585d 20%, #303343 25%, #2E3141 25%, #2E3141 27%, #303343 27%, #303343 50%, #2E3141 50%, #2E3141 85%, #303343 85%, #5f6068 90%, #2E3141 90%)
 }
 .race-now {
     background-color: rgb(214, 47, 58);
@@ -63,15 +63,9 @@ body {
 .btn {
     margin-top: 2rem;
     font-size: 1rem;
-    /* padding: .5rem 2rem; */
-    /* background-color: #5959ff; */
     border: none;
     outline: none;
     color: #fff;
-    /* font-weight: 500; */
-    /* cursor: pointer; */
-    /* box-shadow: 0 0 .4rem rgba(0, 0, 0, .5); */
-    /* border-radius: .5rem; */
 
     background-color: rgb(214, 47, 58);
     border: none;

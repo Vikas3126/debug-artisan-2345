@@ -56,7 +56,11 @@ io.on("connection",(socket)=>{
         connectedUsers[socket.id] = {name : userName};
         io.emit('lobby_info', Object.values(connectedUsers));
     })
-
+    
+    socket.on('loby-message',(userName,message)=>{
+      // connectedUsers[socket.id] = {name : userName,msg:message};
+      io.emit('lobby_msg', userName,message);
+  })
 
     socket.on('disconnect', () => {
         if (connectedUsers[socket.id]) {
