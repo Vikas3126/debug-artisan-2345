@@ -11,6 +11,47 @@
     />
   <link rel="stylesheet" href="../styles/achive.css">
   <link rel="stylesheet" href="../styles/nav.res.css">
+  <style>   
+    .inner-navbar {
+        display: none; 
+        flex-direction: column;
+        background-color: #333;
+        z-index: 2;
+        overflow: hidden;
+    }
+    
+    .inner-navbar.show {
+        display: flex; 
+    }
+    
+    .inner-navbar button {
+        width: 100%;
+        display: none; 
+    }
+    
+    .menu-toggle {
+        color: aliceblue;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .menu-toggle {
+            display: block;
+        }
+    
+        .inner-navbar.show button {
+            display: block; 
+        }
+    
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    
+    
+        </style>
 </head>
 <body>
   <h1 class="main-heading" onclick="homePage()">
