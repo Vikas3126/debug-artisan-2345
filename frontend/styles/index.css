@@ -9,8 +9,10 @@
 }
 
 body {
-  background-color: rgb(46, 49, 65);
+  /* background-color: rgb(46, 49, 65); */
+  
   color: #fff;
+  background: url(../images/bg-tires.png), linear-gradient(130deg, #767882 0%, #2E3141 20%, #56585d 20%, #303343 25%, #2E3141 25%, #2E3141 27%, #303343 27%, #303343 50%, #2E3141 50%, #2E3141 85%, #303343 85%, #5f6068 90%, #2E3141 90%)
 }
 
 ul,

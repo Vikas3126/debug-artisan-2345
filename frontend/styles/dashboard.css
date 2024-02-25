@@ -3,7 +3,7 @@ body {
     padding: 0;
     font-family: 'Arial', sans-serif;
     /* background-color: #f8f8f8; */
-    background: url(../images/bg-tires.png), linear-gradient(130deg, #9498ab 0%, #2E3141 20%, #93959d 20%, #303343 25%, #2E3141 25%, #2E3141 27%, #303343 27%, #303343 50%, #2E3141 50%, #2E3141 85%, #303343 85%, #9294a2 90%, #2E3141 90%)
+    background: url(../images/bg-tires.png), linear-gradient(130deg, #767882 0%, #2E3141 20%, #56585d 20%, #303343 25%, #2E3141 25%, #2E3141 27%, #303343 27%, #303343 50%, #2E3141 50%, #2E3141 85%, #303343 85%, #5f6068 90%, #2E3141 90%)
 }                  
 
 .container {
