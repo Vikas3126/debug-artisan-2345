@@ -46,7 +46,7 @@ app.use('/facebook', facebookRouter);
 app.use('/google', googleRouter);
 app.use("/news",newsRouter)
 
-app.use(express.static('lobby.html'));
+app.use(express.static('public'));
 
 
 
