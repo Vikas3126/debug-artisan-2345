@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../styles/learningTool.css">
+<link rel="stylesheet" href="../styles/nav.res.css">
+</head>
+<body>
+    <h1 class="main-heading" onclick="homePage()">
+        <span>S</span>PEEDSTER<span></span>
+      </h1>
+      <nav class="navbar">
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <div class="inner-navbar">
+          <button id="Home" class="navbar-selected">Home</button>
+          <button id="shop">Shop</button>
+          <button id="friends">Friends</button>
+          <button id="team">news</button>
+          <button id="Learnig">Tools</button>
+          
+        </div>
+        <button id="logout-btn" class="race-now" onclick="logout()">
+          <span class="material-symbols-outlined"> Logout </span> Logout
+          </button>
+          <button id="logout-btn1" class="race-now" onclick="logout()">
+            <span class="material-symbols-outlined"> Logout </span>
+            </button>
+          
+      </nav>
+  <div class="accordion" id="accordionPanelsStayOpenExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseOne">
+                How to put your fingers on keyboard ?
+            </button>
+        </h2>
+        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse mainContainer "
+            aria-labelledby="panelsStayOpen-headingOne">
+            <div class="accordion-body">
+                <strong>Touch typing is all about the idea that each finger has its own area on the keyboard. Thanks
+                    to that fact you can type without looking at the keys. Practice regularly and your fingers will
+                    learn their location on the keyboard through muscle memory.
+            </div>
+            <div class="accordion-body-img-container">
+                <img class="accordion-body-img" src="../images/img.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseTwo">
+                Correct way of sitting for typing
+            </button>
+        </h2>
+        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse mainContainer"
+            aria-labelledby="panelsStayOpen-headingTwo">
+            <div class="accordion-body">
+                <strong>1. Sit straight and remember to keep your back straight.
+                    <br>
+                    2. Keep your elbows bent at the right angle.
+                    <br>
+
+                    3. Face the screen with your head slightly tilted forward.
+                    <br>
+
+                    4. Keep at least 45 - 70 cm of distance between your eyes and the screen.
+                    <br>
+
+                    5. Еxpose the shoulder, arm, and wrist muscles to the least possible strain. The wrists can
+                    touch the tabletop in front of the keyboard. Never shift your body weight to the wrists by
+                    resting on them.
+            </div>
+            <div class="accordion-body-img-container">
+                <img  class="accordion-body-img" id="correctwaysittingImg" src="../images/correctwaysitting.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseThree">
+                Starting Fingers position
+            </button>
+        </h2>
+        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse mainContainer"
+            aria-labelledby="panelsStayOpen-headingThree">
+            <div class="accordion-body">
+                <strong>Curve your fingers a little and put them on the ASDF and JKL; keys which are located in the
+                    middle row of the letter keys. This row is called HOME ROW because you always start from these
+                    keys and always return to them.
+                    F and J keys under your index fingers should have a raised line on them to aide in finding these
+                    keys without looking..
+            </div>
+            <div class="accordion-body-img-container">
+                <img  class="accordion-body-img" src="../images/basic-position.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseFour">
+                Fingers motion
+            </button>
+        </h2>
+        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse mainContainer"
+            aria-labelledby="panelsStayOpen-headingFour">
+            <div class="accordion-body">
+                <strong>Don`t look at the keys when you type.Just slide your fingers around until they find the home
+                    row marking.
+                    Limit your hand and finger movement only to what is necessary to press a specific key. Keep your
+                    hands and fingers close to the base position. This improves typing speed and reduces stress on
+                    the hands.
+
+                    Pay attention to ring fingers and little fingers, since they are considerably underdeveloped.
+            </div>
+            <div class="accordion-body-img-container">
+                <img class="accordion-body-img" id="fingerMotionimg" src="../images/blindmotion.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseFive">
+                Keyboard scheme
+            </button>
+        </h2>
+        <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse mainContainer"
+            aria-labelledby="panelsStayOpen-headingFive">
+            <div class="accordion-body">
+                <strong>The color-coded keyboard under lesson input field will help you to understand which finger
+                    should press each key.
+                    <br>
+                    1. Hit keys only with the fingers for which they have been reserved.
+                    <br>
+
+                    2. When typing, imagine the location of the symbol on the keyboard.
+                    <br>
+
+                    3. Establish and maintain a rhythm while typing. Your keystrokes should come at equal intervals.
+                    <br>
+
+                    4. The SHIFT key is always pressed by the pinky finger opposite to the one hitting the other
+                    key.
+                    <br>
+                    5.Use the thumb of whichever hand is more convenient for you to press the Space bar.
+            </div>
+            <div class="accordion-body-img-container">
+                <img class="accordion-body-img" id="keyboardSchemeImg" src="../images/hands_baseline.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseSix">
+                Typingspeed
+            </button>
+        </h2>
+        <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse mainContainer"
+            aria-labelledby="panelsStayOpen-headingSix">
+            <div class="accordion-body">
+                <strong>1. Do not rush when you just started learning. Speed up only when your fingers hit the right
+                    keys out of habit.
+                    <br>
+                    2. Take your time when typing to avoid mistakes. The speed will pick up as you progress.
+                    <br>
+
+                    3. Always scan the text a word or two in advance.
+                    <br>
+
+                    4. Pass all typing lessons at Ratatype. It will help you to get above the average typing speed.
+            </div>
+            <div class="accordion-body-img-container">
+                <img class="accordion-body-img" src="../images/results-page.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseSeven">
+                Take careof yourself
+            </button>
+        </h2>
+        <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse mainContainer"
+            aria-labelledby="panelsStayOpen-headingSeven">
+            <div class="accordion-body">
+                <strong>Take a break if you feel that you get distracted easily and are making a lot of mistakes. It
+                    is more productive to come back when you feel refreshed.
+            </div>
+            <div class="accordion-body-img-container">
+                <img class="accordion-body-img" id=""src="../images/Self.webp" alt="">
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="../scripts/logout.js"></script>
+
+</body>
+</html>

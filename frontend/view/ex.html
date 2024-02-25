@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Popup with Dark Background</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            /* background-color: rgba(0, 0, 0, 0.5); Dark background color */
+        }
+
+        #popup-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        #close-btn {
+            cursor: pointer;
+            color: #333;
+            background-color: #ddd;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="popup-container">
+        <p>This is the content of the popup window.</p>
+        <button id="close-btn" onclick="closePopup()">Close</button>
+    </div>
+
+    <button onclick="openPopup()">Click me for Popup</button>
+
+    <script>
+        function openPopup() {
+            // Show the popup
+            document.getElementById('popup-container').style.display = 'block';
+            document.body.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+        }
+
+        function closePopup() {
+            // Hide the popup
+            document.getElementById('popup-container').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    /* display: grid; */
+    place-items: center;
+    min-height: 100vh;
+    background: url(../images/bg-tires.png), linear-gradient(130deg, #9498ab 0%, #2E3141 20%, #93959d 20%, #303343 25%, #2E3141 25%, #2E3141 27%, #303343 27%, #303343 50%, #2E3141 50%, #2E3141 85%, #303343 85%, #9294a2 90%, #2E3141 90%)
+}
+.race-now {
+    background-color: rgb(214, 47, 58);
+    border: none;
+    border-radius: 3px;
+    display: flex;
+    font-weight: 600;
+    align-items: center;
+    padding: 0.4rem 1.4rem;
+    box-shadow: 0px 5px 0px rgb(173, 37, 46);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .race-now:hover {
+    background-color: rgb(185, 42, 51);
+    box-shadow: 0px -3px 0px rgb(173, 37, 46);
+  }
+.container {
+    width: clamp(280px, 92vw, 700px);
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, .5);
+    text-align: center;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 50px;
+}
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 2rem 0;
+}
+.single span:last-of-type { font-weight: 700; }
+.input-section .word {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+.input-section input {
+    width: 90%;
+    padding: .5rem;
+    font-size: 1.2rem;
+    text-align: center;
+    outline: none;
+}
+.text { margin-top: 2rem; }
+
+.btn {
+    margin-top: 2rem;
+    font-size: 1rem;
+    /* padding: .5rem 2rem; */
+    /* background-color: #5959ff; */
+    border: none;
+    outline: none;
+    color: #fff;
+    /* font-weight: 500; */
+    /* cursor: pointer; */
+    /* box-shadow: 0 0 .4rem rgba(0, 0, 0, .5); */
+    /* border-radius: .5rem; */
+
+    background-color: rgb(214, 47, 58);
+    border: none;
+    border-radius: 3px;
+    /* display: flex; */
+    font-weight: 600;
+    align-items: center;
+    padding: 0.4rem 1.4rem;
+    box-shadow: 0px 5px 0px rgb(173, 37, 46);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.btn:hover { background-color: rgb(185, 42, 51);
+    box-shadow: 0px -3px 0px rgb(173, 37, 46);}
+.btn:active { transform: scale(.9); }
+
+.hidden { display: none; }
+
+.game-ended { margin-top: 1rem; }
+
+.correct { background-color: #00d100; }
+.incorrect { background-color: #ff0c0c; }
+
+.text span {
+    padding: .15rem .2rem;
+    color: #fff;
+    margin-top: 0.3rem;
+    display: inline-block;
+}
+
+ul,
+li,
+a {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.main-heading {
+  margin: 1.6rem 0;
+  font-size: 2.6rem;
+  font-weight: 900;
+  letter-spacing: 0.4rem;
+  text-align: center;
+  transform: skewX(-16deg);
+  cursor: pointer;
+  color: white;
+}
+
+.main-heading span {
+  padding: 0.2rem 0.1rem 0.2rem 0.4rem;
+  background-color: rgb(214, 47, 58);
+  transform: skewX(-20deg);
+}
+
+.main-heading span:nth-child(2) {
+  padding: 0.2rem;
+  margin-left: 0.2rem;
+}
+
+button {
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.race-now {
+  background-color: rgb(214, 47, 58);
+  border: none;
+  border-radius: 3px;
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  padding: 0.4rem 1.4rem;
+  box-shadow: 0px 5px 0px rgb(173, 37, 46);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.race-now:hover {
+  background-color: rgb(185, 42, 51);
+  box-shadow: 0px -3px 0px rgb(173, 37, 46);
+}
+
+.race-now span {
+  font-weight: 700;
+  letter-spacing: 0.4rem;
+}
+
+.inner-navbar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.inner-navbar button {
+  background-color: rgb(60, 64, 85);
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0.8rem 1.4rem;
+  width: 8rem;
+}
+
+.inner-navbar button:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.navbar-selected {
+  background: linear-gradient(
+    0deg,
+    rgb(61, 61, 61) 0%,
+    rgb(44, 44, 44) 50%,
+    rgb(34, 34, 34) 100%
+  );
+  color: rgba(255, 255, 255, 1);
+}

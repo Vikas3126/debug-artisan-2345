@@ -3,7 +3,98 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: url(../images/bg-tires.png), linear-gradient(130deg, #9498ab 0%, #2E3141 20%, #93959d 20%, #303343 25%, #2E3141 25%, #2E3141 27%, #303343 27%, #303343 50%, #2E3141 50%, #2E3141 85%, #303343 85%, #9294a2 90%, #2E3141 90%);
+  background: url(../images/bg-tires.png), linear-gradient(130deg, #474952 0%, #2E3141 20%, #93959d 20%, #303343 25%, #2E3141 25%, #2E3141 27%, #303343 27%, #303343 50%, #2E3141 50%, #2E3141 85%, #303343 85%, #9294a2 90%, #2E3141 90%)
+}
+
+ul,
+li,
+a {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.main-heading {
+  margin: 1.6rem 0;
+  font-size: 2.6rem;
+  font-weight: 900;
+  letter-spacing: 0.4rem;
+  text-align: center;
+  transform: skewX(-16deg);
+  cursor: pointer;
+  color: white;
+}
+
+.main-heading span {
+  padding: 0.2rem 0.1rem 0.2rem 0.4rem;
+  background-color: rgb(214, 47, 58);
+  transform: skewX(-20deg);
+}
+
+.main-heading span:nth-child(2) {
+  padding: 0.2rem;
+  margin-left: 0.2rem;
+}
+
+button {
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.race-now {
+  background-color: rgb(214, 47, 58);
+  border: none;
+  border-radius: 3px;
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  padding: 0.4rem 1.4rem;
+  box-shadow: 0px 5px 0px rgb(173, 37, 46);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.race-now:hover {
+  background-color: rgb(185, 42, 51);
+  box-shadow: 0px -3px 0px rgb(173, 37, 46);
+}
+
+.race-now span {
+  font-weight: 700;
+  letter-spacing: 0.4rem;
+}
+
+.inner-navbar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.inner-navbar button {
+  background-color: rgb(60, 64, 85);
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0.8rem 1.4rem;
+  width: 8rem;
+}
+
+.inner-navbar button:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.navbar-selected {
+  background: linear-gradient(
+    0deg,
+    rgb(61, 61, 61) 0%,
+    rgb(44, 44, 44) 50%,
+    rgb(34, 34, 34) 100%
+  );
+  color: rgba(255, 255, 255, 1);
 }
 
 .container {

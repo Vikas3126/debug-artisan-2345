@@ -26,9 +26,9 @@ function updateLobby(lobbyUsers) {
         userLobby.appendChild(newUser);
     });
 
-    
-
 }
+
+
 socket.on('lobby_msg', (username,message) => {
     updatemessage(username,message);
 });
@@ -44,3 +44,4 @@ function updatemessage(username,messagedetails) {
     
 
 }
+
