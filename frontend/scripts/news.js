@@ -2,7 +2,7 @@
   function appendCards() {
     const cardContainer = document.getElementById("card-container");
 
-    fetch("http://localhost:4400/news", {
+    fetch("https://type-racing-speedster.onrender.com/news", {
       method: "GET",
       headers: {
         "Content-Type": "application/json"

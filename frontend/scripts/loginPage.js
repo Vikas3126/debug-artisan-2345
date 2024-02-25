@@ -12,7 +12,7 @@ signInLink.addEventListener("click", () => {
   wrapper.classList.remove("animated-signin");
 });
 
-const baseURL = "http://localhost:4400/";
+const baseURL = "https://type-racing-speedster.onrender.com/";
 
 const invalidspan = document.getElementById("invalid-text");
 const invalid1span = document.getElementById("invalid1-text");
@@ -123,7 +123,7 @@ async function loginUser() {
         localStorage.setItem("token", data.access_token);
         localStorage.setItem("name", data.name);
 
-        location.href = "dashboard.html";
+        location.href = "../public/dashboard.html";
       } else {
         invalidspan.innerHTML = `${data.msg}`;
         invalidspan.style.color = "red";

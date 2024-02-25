@@ -6,10 +6,10 @@
 //     loadRaceSection("Create a Race Content");
 // });
 
-document.getElementById("team").addEventListener("click", function (e) {
-    e.preventDefault()
-    window.location.href = "news.html"
-});
+// document.getElementById("team").addEventListener("click", function (e) {
+//     e.preventDefault()
+//     window.location.href = "news.html"
+// });
 
 // function loadRaceSection(content) {
 //     document.getElementById("raceSection").innerHTML = content;
