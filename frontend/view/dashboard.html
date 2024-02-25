@@ -21,7 +21,6 @@
             background-color: #fff;
             border: 1px solid #ccc;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
         }
     </style>
 </head>
@@ -63,14 +62,9 @@
                     <h2>Real-Time Racing</h2>
                 <p>Compete with people around the world in real-time typing races.</p>
                 </div>
-                
                 <div >
                     <a style=" align-self: start;" href="#" class="start-btn" onclick="openPopup()">Start Practice</a>
                     <img class="image" src="../images/car-re.png" alt="Feature 1">
-                    <div id="popup">
-                      <p>This is the content of the popup window.</p>
-                      <button onclick="closePopup()">Close</button>
-                  </div>
                 </div>
             </div>
             <div class="feature">
@@ -85,6 +79,10 @@
                 <h2>Repeating words</h2>
                 <p>Easy repeating words for practice.</p>
                 <a href="#" class="start-btn">Play with words</a>
+            </div>
+            <div id="popup">
+                <input type="text" id="user-detail">
+                <button onclick="joinLobby()">join lobby</button>
             </div>
         </section>
     </main>
@@ -117,15 +115,15 @@
       <script>
         function openPopup() {
             // Show the popup
-            document.getElementById('popup').style.display = 'block';
-        }
-
-        function closePopup() {
-            // Hide the popup
-            document.getElementById('popup').style.display = 'none';
+            document.getElementById('popup').style.display = 'flex';
+            document.getElementById('popup').style.flexDirection = 'column';
+            document.getElementById('popup').style.gap = '5%';
         }
       </script>
     <script src="../scripts/dashboard.js"></script>
     <script src="../scripts/logout.js"></script>
+    <script src="https://cdn.socket.io/4.7.4/socket.io.min.js" integrity="sha384-Gr6Lu2Ajx28mzwyVR8CFkULdCU7kMlZ9UthllibdOSo6qAiN+yXNHqtgdTvFXMT4" crossorigin="anonymous"></script>
+    <script src="../scripts/lobby.js"></script>
+    
 </body>
 </html>

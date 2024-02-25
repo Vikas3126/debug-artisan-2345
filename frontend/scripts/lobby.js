@@ -1,11 +1,35 @@
 const socket = io("http://localhost:4400/", { transports: ['websocket'] });
 
 
-function joinLobby(){
-    const username = document.getElementById('userName').value;
-    socket.emit("join-lobby",username);
+function joinLobby() {
+    const usernameInput = document.getElementById('user-detail');
+    const username = usernameInput.value.trim(); // Trim whitespace from the username
+
+    if (username === "") {
+        alert("Please enter a username.");
+        return;
+    }
+
+    // Store connection state in sessionStorage
+    sessionStorage.setItem("username", username);
+
+    // Redirect the user to the lobby page
+    window.location.href = "./lobby.html";
 }
 
+window.onload = function() {
+    const username = sessionStorage.getItem("username");
+
+    if (username) {
+        const socket = io("http://localhost:4400/", { transports: ['websocket'] });
+
+        socket.on("connect", () => {
+            socket.emit("join-lobby", username);
+        });
+
+        // Additional socket event listeners can be added here
+    }
+};
 
 socket.on('lobby_info', (lobbyUsers) => {
     updateLobby(lobbyUsers);
@@ -16,10 +40,39 @@ function updateLobby(lobbyUsers) {
     userLobby.innerHTML = '';
     lobbyUsers.forEach(user => {
         const newUser = document.createElement('div');
+        console.log(`hello ${user.name}`);
         newUser.textContent = `${user.name} joined`;
         newUser.classList.add('joined-user');
         userLobby.appendChild(newUser);
     });
 
+}
+
+function timer() {
+    const popup = document.getElementById('popup');
+    popup.innerHTML = '';
+    popup.style.display = "flex";
+    popup.style.flexDirection = "column";
+
+    const timerElement = document.createElement('h2');
+    const gif = document.createElement('img');
+    gif.src = "https://cdn.pixabay.com/animation/2023/03/27/19/09/19-09-52-704_512.gif";
+    popup.append(timerElement, gif);
+
+    let count = 5;
+    updateTimer();
+
+    function updateTimer() {
+        if (count > 0) {
+            timerElement.innerText = count;
+            count--;
+            setTimeout(updateTimer, 1000); 
+        } else {
+            timerElement.innerText = "GO";
+            setTimeout(() => {
+                window.location.href = "multiplayer.html";
+            }, 1000); 
+        }
+    }
 }
 

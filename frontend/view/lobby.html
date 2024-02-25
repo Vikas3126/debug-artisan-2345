@@ -5,12 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../styles/lobby.css">
+    <style>
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #030303;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            z-index: 2;
+        }
+        /* #popup {
+            display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+} */
+
+h2 {
+    /* position: absolute; */
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 20px;
+    color: antiquewhite;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+    </style>
 </head>
 <body>
-    <input type="text" id="userName" placeholder="Enter your name">
-    <button onclick="joinLobby()">Join Lobby</button>
-    <div id="contain"></div>
+    <div id="popup"></div>
+    <!-- <button onclick="joinLobby()">Join Lobby</button> -->
     <div id="user-joining" style="border: 1px solid black; width: 40%; height: 400px; position: relative; left: 30%; top: 150px;"></div>
+    <button class="start" onclick="timer()">START</button>
 </body>
     <!-- <script src="https://cdn.socket.io/4.7.4/socket.io.min.js" integrity="sha384-Gr6Lu2Ajx28mzwyVR8CFkULdCU7kMlZ9UthllibdOSo6qAiN+yXNHqtgdTvFXMT4" crossorigin="anonymous"></script> -->
     <script src="https://cdn.socket.io/4.7.4/socket.io.min.js" integrity="sha384-Gr6Lu2Ajx28mzwyVR8CFkULdCU7kMlZ9UthllibdOSo6qAiN+yXNHqtgdTvFXMT4" crossorigin="anonymous"></script>
