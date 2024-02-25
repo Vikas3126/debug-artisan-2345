@@ -59,6 +59,7 @@ io.on("connection",(socket)=>{
     
     socket.on('loby-message',(userName,message)=>{
       // connectedUsers[socket.id] = {name : userName,msg:message};
+      // const username= connectedUsers.name
       io.emit('lobby_msg', userName,message);
   })
 
