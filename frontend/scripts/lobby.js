@@ -1,4 +1,4 @@
-const socket = io("http://localhost:4400/", { transports: ['websocket'] });
+const socket = io("https://type-racing-speedster.onrender.com/", { transports: ['websocket'] });
 
 
 function joinLobby() {
@@ -32,7 +32,7 @@ window.onload = function() {
     const username = sessionStorage.getItem("username");
 
     if (username) {
-        const socket = io("http://localhost:4400/", { transports: ['websocket'] });
+        const socket = io("https://type-racing-speedster.onrender.com/", { transports: ['websocket'] });
 
         socket.on("connect", () => {
             socket.emit("join-lobby", username);

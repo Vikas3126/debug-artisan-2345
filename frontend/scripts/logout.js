@@ -2,7 +2,7 @@
 function logout() {
     const accessToken = localStorage.getItem("token");
 
-    fetch(`http://localhost:4400/users/logout`, {
+    fetch(`https://type-racing-speedster.onrender.com/users/logout`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -28,17 +28,22 @@ function logout() {
 
 document.getElementById("Learnig").addEventListener("click", function (e) {
     e.preventDefault()
-    window.location.href = "learningTool.html"
+    window.location.href = "../view/learningTool.html"
 });
 
 document.getElementById("team").addEventListener("click", function (e) {
     e.preventDefault()
-    window.location.href = "news.html"
+    window.location.href = "../view/news.html"
 });
 
 document.getElementById("Home").addEventListener("click", function (e) {
     e.preventDefault()
-    window.location.href = "dashboard.html"
+    window.location.href = "../public/dashboard.html"
+});
+
+document.getElementById("achievements").addEventListener("click", function (e) {
+    e.preventDefault()
+    window.location.href = "../view/achivement.html"
 });
 function toggleMenu() {
     var innerNavbar = document.querySelector('.inner-navbar');
