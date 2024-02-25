@@ -66,7 +66,7 @@ body {
     padding-bottom: 20px;
 }
 
-.wrapper .form-container form h2 {
+.wrapper .form-container .form h2 {
     font-size: 2.2rem;
     text-align: center;
     text-transform: capitalize;
@@ -77,14 +77,14 @@ img{
     cursor: pointer;
 }
 
-.wrapper .form-container form .form-group {
+.wrapper .form-container .form .form-group {
     position: relative;
     width: 32rem;
     margin: 3rem 0;
 }
 
-.wrapper .form-container form .form-group i,
-.wrapper .form-container form .form-group label {
+.wrapper .form-container .form .form-group i,
+.wrapper .form-container .form .form-group label {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -96,15 +96,15 @@ img{
     transition: all .5s ease;
 }
 
-.wrapper .form-container form .form-group i {
+.wrapper .form-container .form .form-group i {
     left: .5rem;
 }
 
-.wrapper .form-container form .form-group label {
+.wrapper .form-container .form .form-group label {
     left: 2.5rem;
 }
 
-.wrapper .form-container form .form-group input {
+.wrapper .form-container .form .form-group input {
     width: 100%;
     height: 4rem;
     padding: 0 1rem;
@@ -117,20 +117,20 @@ img{
     background: transparent;
 }
 
-form .form-group input:focus~label,
-form .form-group input:valid~label,
-form .form-group input:focus~i,
-form .form-group input:valid~i {
+.form .form-group input:focus~label,
+.form .form-group input:valid~label,
+.form .form-group input:focus~i,
+.form .form-group input:valid~i {
     top: 0 !important;
     font-size: 1.2rem !important;
     background-color: var(--whiteColor);
 }
 
-.wrapper .form-container form .forgot-pass {
+.wrapper .form-container .form .forgot-pass {
     margin: -1.5rem 0 1.5rem;
 }
 
-.wrapper .form-container form .forgot-pass a {
+.wrapper .form-container .form .forgot-pass a {
     color: var(--labelColor);
     text-decoration: none;
     font-size: 1.4rem;
@@ -138,11 +138,11 @@ form .form-group input:valid~i {
     transform: all .5s ease;
 }
 
-.wrapper .form-container form .forgot-pass a:hover {
+.wrapper .form-container .form .forgot-pass a:hover {
     color: var(--mainColor);
 }
 
-.wrapper .form-container form .btn {
+.wrapper .form-container .form .btn {
     background: linear-gradient(to right, #2d3140, var(--mainColor));
     color: var(--whiteColor);
     text-transform: capitalize;
@@ -157,14 +157,14 @@ form .form-group input:valid~i {
     box-shadow: 0 .2rem 1rem rgba(0 0 0 / .4);
 }
 
-.wrapper .form-container form .link {
+.wrapper .form-container .form .link {
     text-align: center;
     font-size: 1.4rem;
     color: var(--labelColor);
     margin: 2.5rem 0;
 }
 
-.wrapper .form-container form .link a {
+.wrapper .form-container .form .link a {
     text-transform: capitalize;
     color: var(--mainColor);
     text-decoration: none;
@@ -172,7 +172,7 @@ form .form-group input:valid~i {
     transition: all .5s ease;
 }
 
-.wrapper .form-container form .link a:hover {
+.wrapper .form-container .form .link a:hover {
     color: #da4453;
 }
 
