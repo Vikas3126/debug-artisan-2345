@@ -1,18 +1,15 @@
 const userInterface = document.getElementById('multiplayer-interface');
     const username = sessionStorage.getItem("username");
-    const socket = io("https://type-racing-speedster.onrender.com/", { transports: ['websocket'] });
+    const socket = io("http://localhost:4400/", { transports: ['websocket'] });
         socket.on("connect", () => {
             socket.emit("join-lobby", username);
         });
-        // socket.on("connect", () => {
-        //     socket.emit("loby-message", username,message);
-        // });
-        // Additional socket event listeners can be added here
+       
     
         let carImages = []; // Array to store the car images
 
         // Fetch car images from the server
-        fetch('https://type-racing-speedster.onrender.com/cars/')
+        fetch('http://localhost:4400/cars/')
           .then(response => response.json())
           .then(data => {
             carImages = data.car_data; 
@@ -23,7 +20,7 @@ const userInterface = document.getElementById('multiplayer-interface');
 
 
 
-        socket.on("connections_count", (count) => {
+        socket.on("connections_count", ({count, usernames}) => {
             // Clear existing tracks
             userInterface.innerHTML = '';
         
@@ -36,7 +33,7 @@ const userInterface = document.getElementById('multiplayer-interface');
                 console.log(carImageSrc)
                 // Create an image element for the car
                 let caruser = document.createElement("p")
-                caruser.innerText = username
+                caruser.innerText = usernames[i]
                 usersTrack.appendChild(caruser)
 
                 let carImage = document.createElement('img');
@@ -47,7 +44,7 @@ const userInterface = document.getElementById('multiplayer-interface');
 
                 usersTrack.className = "user-track";
                 let track = document.createElement('h2');
-                track.textContent = "- - - - - - - - - - - - - - - - - - - - - - - - - -";
+                track.textContent = "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -";
                 track.className = "track";
                 usersTrack.append(track);
                 userInterface.append(usersTrack);

@@ -1,0 +1,38 @@
+#multiplayer-interface {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    /* background-color: #f0f0f0; */
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .user-track {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* text-align: center; */
+  }
+  .user-track p{
+    color: antiquewhite;
+    font-size: medium;
+  }
+  #carImage {
+    width: 100px; /* Adjust the width as needed */
+    height: auto;
+  }
+  
+  .track {
+    font-size: 1.2rem;
+    color: #f1eaea;
+    margin-top: 8px; /* Adjust the margin as needed */
+  }
+  
+  /* Additional styling for the container */
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: url(../images/bg-tires.png), linear-gradient(130deg, #767882 0%, #2E3141 20%, #56585d 20%, #303343 25%, #2E3141 25%, #2E3141 27%, #303343 27%, #303343 50%, #2E3141 50%, #2E3141 85%, #303343 85%, #5f6068 90%, #2E3141 90%)
+  }
+  

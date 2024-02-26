@@ -53,19 +53,19 @@ app.use("/cars",carRoute)
 app.use(express.static('public'));
 
 let connections = 0;
-
+let userNames = [];
 io.on("connection", (socket) => {
-  // Increment connections count
+
   connections++;
-
-  // Emit updated connections count to all clients
-  io.emit("connections_count", connections);
-
-  // Handle 'join-lobby' event
+  
   socket.on('join-lobby', (userName) => {
       console.log(`${userName} connected`);
       connectedUsers[socket.id] = { name: userName };
+      userNames.push(connectedUsers[socket.id].name)
       io.emit('lobby_info', Object.values(connectedUsers));
+      userNames.map(user=>{
+        io.emit("connections_count", { count: connections, usernames: userNames });
+      })
   });
 
 
