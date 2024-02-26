@@ -7,10 +7,31 @@
     <link rel="shortcut icon" href="../images/Speedster.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles/multiplayer.css">
     <link rel="stylesheet" href="../styles/practice.css">
+    <link rel="stylesheet" href="../styles/nav.res.css">
 </head>
 <body>
     <!-- navbar -->
-
+    <h1 class="main-heading" onclick="homePage()">
+        <span>S</span>PEEDSTER<span></span>
+      </h1>
+      <nav class="navbar">
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <div class="inner-navbar">
+            <button id="Home" class="navbar-selected">Dashboard</button>
+          <button id="achievements">Achievements</button>
+          <button id="friends">Friends</button>
+          <button id="team">news</button>
+          <button id="Learnig">Tools</button>
+          
+        </div>
+        <button id="logout-btn" class="race-now" onclick="logout()">
+          <span class="material-symbols-outlined"> Logout </span> Logout
+          </button>
+          <button id="logout-btn1" class="race-now" onclick="logout()">
+            <span class="material-symbols-outlined"> Logout </span>
+            </button>
+          
+      </nav>
     <div id="multiplayer-interface"></div>
     <div class="wrapper">
       
@@ -47,5 +68,6 @@
 
 <script src="https://cdn.socket.io/4.7.4/socket.io.min.js" integrity="sha384-Gr6Lu2Ajx28mzwyVR8CFkULdCU7kMlZ9UthllibdOSo6qAiN+yXNHqtgdTvFXMT4" crossorigin="anonymous"></script>
 <script src="../scripts/multiplayer.js"></script>
+<script src="../scripts/logout.js"></script>
 
 </html>
