@@ -114,7 +114,7 @@ inpField.addEventListener("input", initTyping);
 tryAgainBtn.addEventListener("click", resetGame);
 
 // Fetch car images from the server
-fetch('https://type-racing-speedster.onrender.com/')
+fetch('https://type-racing-speedster.onrender.com/cars/')
     .then(response => response.json())
     .then(data => {
         carImages = data.car_data; 
