@@ -10,11 +10,18 @@ Explore our platform:
 - **HTML**
 - **CSS**
 - **JavaScript**
-- #Backend
+
+### Backend
+
 - **Node.js**
 - **Express**
-  #DataBase
+
+### Database
+
 - **MongoDB**
-# #Eternal CSS library
+
+### External CSS library
+
 - Bootstrap
+
   
