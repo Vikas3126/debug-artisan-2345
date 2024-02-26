@@ -57,7 +57,7 @@ let userNames = [];
 io.on("connection", (socket) => {
 
   connections++;
-  
+
   socket.on('join-lobby', (userName) => {
       console.log(`${userName} connected`);
       connectedUsers[socket.id] = { name: userName };
@@ -68,6 +68,10 @@ io.on("connection", (socket) => {
       })
   });
 
+  socket.on('typing',(typedText)=>{
+    socket.broadcast.emit('typing',typedText);
+    console.log(typedText);
+  })
 
   socket.on('loby-message',(userName,message)=>{
       // connectedUsers[socket.id] = {name : userName,msg:message};
@@ -77,21 +81,35 @@ io.on("connection", (socket) => {
 
 
   // Handle socket disconnection
-  socket.on('disconnect', () => {
+  socket.on('disconnect', (userName) => {
       // Decrement connections count on disconnection
       connections--;
 
       // Emit updated connections count to all clients
-      io.emit("connections_count", connections);
+      connectedUsers[socket.id] = { name: userName };
+      const disconnectedUsername = connectedUsers[socket.id].name;
+    usernames = userNames.filter(name => name !== disconnectedUsername);
 
-      if (connectedUsers[socket.id]) {
-          const userName = connectedUsers[socket.id].name;
-          delete connectedUsers[socket.id];
-          console.log(`${userName} left the lobby`);
-          io.emit('lobby_info', connectedUsers);
-      }
+    // Emit updated connections count and usernames to all clients
+    io.emit("connections_count", { count: connections, usernames: usernames });
+
+    if (connectedUsers[socket.id].name) {
+      const userName = connectedUsers[socket.id].name;
+      delete connectedUsers[socket.id];
+      console.log(`${userName} left the lobby`);
+      io.emit('lobby_info', Object.values(connectedUsers));
+    }
   });
 });
+
+//       if (connectedUsers[socket.id]) {
+//           const userName = connectedUsers[socket.id].name;
+//           delete connectedUsers[socket.id];
+//           console.log(`${userName} left the lobby`);
+//           io.emit('lobby_info', connectedUsers);
+//       }
+//   });
+// });
 
 
 

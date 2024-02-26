@@ -2,7 +2,7 @@ const userInterface = document.getElementById('multiplayer-interface');
 const username = sessionStorage.getItem("username");
 // const inputPanel = document.getElementById('typing-input');
 // const panelInfo = document.getElementById('panel-info');
-const socket = io("http://localhost:4400/", { transports: ['websocket'] });
+const socket = io("https://type-racing-speedster.onrender.com/", { transports: ['websocket'] });
 
 
 
@@ -34,7 +34,12 @@ function loadParagraph() {
 }
 
 
-function initTyping() {
+function initTyping(typedText) {
+  
+  let cars = document.getElementById("carImage0");
+  let pos = 0;
+  let start = window.getComputedStyle(cars).left;
+  console.log(start)
   let characters = typingText.querySelectorAll("span");
   let typedChar = inpField.value.split("")[charIndex];
   if(charIndex < characters.length - 1 && timeLeft > 0) {
@@ -53,6 +58,13 @@ function initTyping() {
       } else {
           if(characters[charIndex].innerText == typedChar) {
               characters[charIndex].classList.add("correct");
+              cars.classList.add("correct");
+              
+              start = `${Number(start.split("px")[0])+1}px`
+              console.log(start)
+
+              cars.style.left = start;
+
           } else {
               mistakes++;
               characters[charIndex].classList.add("incorrect");
@@ -102,7 +114,7 @@ inpField.addEventListener("input", initTyping);
 tryAgainBtn.addEventListener("click", resetGame);
 
 // Fetch car images from the server
-fetch('http://localhost:4400/cars/')
+fetch('https://type-racing-speedster.onrender.com/')
     .then(response => response.json())
     .then(data => {
         carImages = data.car_data; 
@@ -130,10 +142,12 @@ socket.on("connections_count", ({ count, usernames }) => {
         usersTrack.appendChild(caruser)
 
         let carImage = document.createElement('img');
-        carImage.setAttribute("id", "carImage");
+        carImage.setAttribute("id", `carImage${i}`);
+        carImage.className = "carImage"
         carImage.src = carImageSrc.image;
         carImage.alt = 'Car';
         usersTrack.appendChild(carImage);
+        
 
         usersTrack.className = "user-track";
         let track = document.createElement('h2');
@@ -143,5 +157,13 @@ socket.on("connections_count", ({ count, usernames }) => {
         userInterface.append(usersTrack);
     }
 });
+
+
+inpField.addEventListener('input',(event)=>{
+  const typedText = event.target.value;
+initTyping()
+// console.log(typedText);
+  socket.emit('typing',typedText);
+})
 
 

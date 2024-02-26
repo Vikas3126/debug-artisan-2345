@@ -1,7 +1,7 @@
 #multiplayer-interface {
     display: flex;
     align-items: center;
-    height: 100vh;
+    height: 50vh;
     /* background-color: #f0f0f0; */
     flex-direction: column;
     align-content: center;
@@ -18,9 +18,12 @@
     color: antiquewhite;
     font-size: medium;
   }
-  #carImage {
+  .carImage {
     width: 100px; /* Adjust the width as needed */
     height: auto;
+    /* right: 100px; */
+    
+    position: relative
   }
   
   .track {
