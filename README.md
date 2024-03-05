@@ -34,7 +34,10 @@ my-app/
 │  ├─ view/
 ├─ index.html/
 ```
-
+## Credentials
+Demo User:
+Username: Shraddha05
+Password: Shraddha@1234
 ## Video Walkthrough of the project =>- [Youtube](https://www.youtube.com/watch?v=V1s_9XjVdTI&feature=youtu.be)
 
   ## Screenshots
